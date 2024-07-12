@@ -253,11 +253,13 @@ html{
     .section1, .section2 {
         width: 100%;
         padding: 10px;
+
+    }
+
+    .sec2div21{
         display: flex;
         flex-wrap: wrap;
     }
-
-    
    
 
     .button-container {
