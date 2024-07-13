@@ -1,52 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="css/styles.css">
-    
+    <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-encriptar-16.png">
+    <link rel="stylesheet" href="css/styles2.css">
 </head>
-
 <body>
-    
-
     <header class="header">
-        <img src="images/Logo.png" alt="Alura">
+        <div class="header-img-container">
+            <img src="images/Logo.png" alt="Imagen">
+        </div>
     </header>
-    <main class="main">
-        <section class="section1">
-            <label class="Label1" for="textarea1">Ingrese el texto aquí:</label>
-            <textarea id="textarea1" name="textarea1" placeholder="Escriba aquí..." oninput="validarTexto(event)"></textarea>
-            <p class="text-mensaje">
-                <span class="circle">!</span> Solo letras minúsculas y sin acentos
-            </p>
-            <div class="button-container">
-                <button id="BtnEncriptar" class="detalle-button" onclick="Encriptar()">Encriptar</button>
-                <button id="BtnDesencriptar" class="detalle-button" onclick="Desencriptar()">Desencriptar</button>
-            </div>
-        </section>
-        <section class="section2">
-            <div id="sec2div1" class="sec2div1">
-                <img id="ImgMuneco" src="images/Muneco.png" alt="Esperando...">
-                <p class="sec2p1">Ning&uacute;n mensaje fue encontrado </p>
-                <p class="sec2p2">Ingrese el texto que desea encriptar o desencriptar</p>
-            </div>
-            <div id="sec2div2" class="sec2div2">
-                <div class="sec2div21">
-                    <textarea id="textarea2" name="textarea2" class="textarea2" readonly></textarea>
-                    <button class="detalle-button" onclick="Copiar()">Copiar</button>
-                </div>
-            </div>
-
-        </section>
-    </main>
-    <footer class="footer">
-        <p>&copy; 2024 Hernando Bethancourt. All rights reserved.</p>
-    </footer>
-
-    <script src="scripts/scripts.js"></script>
 </body>
-
 </html>
