@@ -1,6 +1,24 @@
+/* Estilos generales */
+* {
+    padding: 0;
+    margin:0;
+}
+
 :root {
     --color-header-background: white;
     --color-border: white; /* Color del marco */
+
+    --color-foote: white; /* Color de fondo del footer */
+    --color-footer-text:  #0c4d92; /* Color del texto del footer */
+    --fuente-Inter: 'Inter', sans-serif; /* Fuente */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    min-height: 100vh; /* Para que el footer esté siempre al final */
+    box-sizing: border-box;
+    gap: 20px;
 }
 
 .header {
@@ -13,9 +31,26 @@
     border: 2px solid var(--color-border); /* Marco alrededor del div */
     padding: 40px 0 0 40px; /* Sin espaciado */
 }
+
 .header img {
     width: 120px; 
     height: 48px;  
     max-width: 100%;
     max-height: 100%;
 }
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado horizontal */
+    text-align: center; /* Centrar texto */
+    height: 60px; /* Altura del footer */
+    background-color: var(--color-footer); /* Color de fondo */
+    font-family: var(--fuente-Inter); /* Fuente */
+    font-size: 1vw; /* Tamaño de fuente */
+    color: var(--color-footer-text); /* Color del texto */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+
+ 
