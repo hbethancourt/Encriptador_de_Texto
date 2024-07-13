@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-    display: flex; 
+    display: flex;   
     background-color: var(--color-header-background);
     position: relative;
     height: 96px; /* Altura igual a la de la imagen */
