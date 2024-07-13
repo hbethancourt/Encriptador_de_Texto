@@ -28,7 +28,7 @@ body {
     height: 96px; /* Altura igual a la de la imagen */
     overflow: hidden; /* Evita que el contenido sobresalga */
 
-}
+} 
 
 .header-img-container {
     width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
