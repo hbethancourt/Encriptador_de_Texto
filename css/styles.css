@@ -12,7 +12,6 @@
     --color-footer-text:  #0c4d92; /* Color del texto del footer */
     --fuente-Inter: 'Inter', sans-serif; /* Fuente */
 
-
     --color-section1: yellow;
     --color-section2: green;
 }
@@ -107,6 +106,10 @@ main {
     .section1 {
         padding: 10px;
     }
+
+    .textarea {
+        width: 100%;
+    }
 }
 
 /* Estilos para móviles (menor a 768px) */
@@ -118,4 +121,9 @@ main {
     .section1 {
         padding: 10px;
     }
+    
+    .textarea {
+        width: 100%;
+    }
+}
 }
