@@ -11,14 +11,16 @@
     --color-footer: red; /* Color de fondo del footer */
     --color-footer-text:  #0c4d92; /* Color del texto del footer */
     --fuente-Inter: 'Inter', sans-serif; /* Fuente */
+
+
+    --color-section1: yellow;
+    --color-section2: green;
 }
 
 body {
     display: flex;
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    min-height: 100vh; /* Para que el footer esté siempre al final */
-    box-sizing: border-box;
-    min-height: 100vh;
+
 }
 
 .header {
@@ -45,23 +47,36 @@ body {
 }
 
 main {
+    flex:1;
     display: flex;
-    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    min-height: 100vh; /* Para que el footer esté siempre al final */
+    flex-direction: row; /* Asegura que los elementos se apilen verticalmente */
+    justify-content: center; /* Centrado horizontal */
     box-sizing: border-box;
-    flex: 1; /* Ocupa el espacio restante */
+}
+.section1{
+    background-color: var(--color-section1); /* Color de fondo */  
+
+}
+.section2{
+    background-color: var(--color-section2); /* Color de fondo */ 
+}
+
+.section1, .section2 {
+    box-sizing: border-box;
+    height: 500px;
 }
 
 .footer {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centrado horizontal */
-    text-align: center; /* Centrar texto */
+    justify-content: center; /* Centrado horizontal */   
     height: 60px; /* Altura del footer */
     background-color: var(--color-footer); /* Color de fondo */
     font-family: var(--fuente-Inter); /* Fuente */
     font-size: 1vw; /* Tamaño de fuente */
     color: var(--color-footer-text); /* Color del texto */
+    margin-top: 0; /* Elimina el margen superior */
+
 }
 
 
