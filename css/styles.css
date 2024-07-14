@@ -47,7 +47,6 @@ body {
 }
 
 main {
-    flex:1;
     display: flex;
     flex-direction: row; /* Asegura que los elementos se apilen verticalmente */
     justify-content: center; /* Centrado horizontal */
@@ -55,7 +54,6 @@ main {
 }
 .section1{
     background-color: var(--color-section1); /* Color de fondo */  
-
 }
 .section2{
     background-color: var(--color-section2); /* Color de fondo */ 
@@ -63,6 +61,7 @@ main {
 
 .section1, .section2 {
     box-sizing: border-box;
+    width: 100%;
     height: 500px;
 }
 
