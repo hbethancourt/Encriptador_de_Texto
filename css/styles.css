@@ -53,11 +53,25 @@ main {
     box-sizing: border-box;
 }
 .section1{
-    background-color: var(--color-section1); /* Color de fondo */  
-   
+    background-color: var(--color-section1); /* Color de fondo */ 
+    display: flex;
     padding:10px 0 0 150px;
     
 }
+
+.textarea {
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    resize: none; /* Opcional: previene el redimensionamiento por el usuario */
+}
+
+.button-container {
+    flex-direction: column;
+    margin-top: auto; /* Empuja el contenedor de los botones hacia el fondo */
+}
+
+
 .section2{
     background-color: var(--color-section2); /* Color de fondo */ 
 }
