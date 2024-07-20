@@ -1,6 +1,6 @@
 
 function Encriptar(){
-    let TextArea1 = document.getElementById('textarea1');
+    let TextArea1 = document.getElementById('input-textarea');
     let StrTextArea1 = TextArea1.value;
     let tamTextArea1 = StrTextArea1.length;
     let StrTextoEncriptado="";
@@ -41,7 +41,7 @@ function Encriptar(){
         }
     }
 
-    document.getElementById('textarea2').value = StrTextoEncriptado;
+    document.getElementById('text-area-readonly').value = StrTextoEncriptado;
 
     HabilitaSec2Div1_o_2(tamTextArea1); 
 }
@@ -62,7 +62,7 @@ function HabilitaSec2Div1_o_2(valor) {
 
 function Desencriptar(){
 
-    let textarea1 = document.getElementById('textarea1').value;
+    let textarea1 = document.getElementById('input-textarea').value;
     let PalabrasArray = textarea1.split(/\s+/);
     let StrTextoDesencriptado="";
  
@@ -92,7 +92,7 @@ function Desencriptar(){
         if(i != PalabrasArray.length) StrTextoDesencriptado += " ";
     }  
 
-    document.getElementById('textarea2').value = StrTextoDesencriptado;
+    document.getElementById('text-area-readonly').value = StrTextoDesencriptado;
 
     HabilitaSec2Div1_o_2(textarea1.length); 
 
@@ -100,7 +100,7 @@ function Desencriptar(){
 }
 
 function Copiar(){
-    let textarea2 = document.getElementById('textarea2');
+    let textarea2 = document.getElementById('text-area-readonly');
     textarea2.select();
 
     document.execCommand('copy');
@@ -123,7 +123,7 @@ function validarTexto(event) {
     }
 }
 
-document.getElementById('textarea1').addEventListener('keydown', function(event) {
+document.getElementById('input-textarea').addEventListener('keydown', function(event) {
     // Permitir Ctrl + V (pegar) y otras combinaciones Ctrl
     if (event.ctrlKey) {
         return true;

@@ -1,0 +1,350 @@
+/* Importar fuente Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Variables de color */
+:root {
+    --color-body:#E9ECF8;
+    --color-header: #E9ECF8;
+    --color-footer: #E9ECF8;
+
+    --color-text-area:#0A3871;
+    --color-text-area-readonly:#495057;
+    --color-text-footer:#0A3871;
+
+    --color-container:#E9ECF8;
+
+    --color-left-section:#E9ECF8;    
+    --color-left-div1:#E9ECF8;
+    --color-left-div2:#E9ECF8;
+    --color-left-div3:#E9ECF8;
+
+    --color-right-section:#E9ECF8;
+    --color-right-container:white;
+    --color-sombra: rgba(0, 0, 0, 0.2); 
+
+    --color-label:#0A3871;
+    --color-area-texto: #E9ECF8;  
+    --color-area-texto-readonly:white;   
+
+    --color-boton: #E9ECF8;
+    --color-text-boton: #0A3871; 
+    --color-boton-hover: #0A3871;
+    --color-boton-text-hover:white;
+
+    --color-mensaje-not-found:#343A40;
+    --color-intstruction-text:#495057;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color:var(--color-body);
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: var(--color-container);
+}
+
+.left-section {
+    background-color: var(--color-left-section);
+    width: 70%;
+    padding: 1.25rem;
+}
+
+.right-section {
+    background-color:var(--color-right-section);
+    width: 30%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+.right-container {
+    background-color:  var(--color-right-container);
+    box-shadow: 0 4px 10px var(--color-sombra);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+   text-align: center;
+   padding-top: 6rem;
+}
+
+.data-encriptada{
+    background-color:var(--color-right-container);
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.message-not-found {
+    color: var(--color-mensaje-not-found);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.instruction-text {
+    color: #495057;
+    font-weight: normal;
+    text-align: center;
+    color:var(--color-intstruction-text);
+    margin-top: 1rem;
+}
+
+.image-muneco {
+    width: 75%;    
+}
+
+.submit-button {
+    padding-top: 20px;    
+    padding-bottom: 20px;    
+    background-color: var(--color-boton);
+    color: var(--color-text-boton);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width:50%;
+    margin-top: 0;
+    transition: background-color 0.3s, color 0.3s;
+    border: .1rem solid #0A3871 ;
+}
+
+.button-copiar{
+    padding-left: 40%;
+    padding-right: 55%;
+  flex: 2;
+}
+
+.submit-button:hover {
+    background-color: var(--color-boton-hover);
+    color: var(--color-boton-text-hover);    
+}
+
+header {
+    background-color: var(--color-header);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.Imagen-header{
+display: flex;
+align-content:flex-start;
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-text-footer);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    font-size: .75rem;
+}
+
+/* Estilos adicionales para los nuevos divs en left-section */
+.left-div{
+    padding-left:10rem;
+}
+.left-div1 {
+    background-color: var(--color-left-div1);  
+}
+
+.label-textarea{
+    font-size: 2rem;
+    color:var(--color-label);
+    display: block;
+}
+
+.text-area {
+    background-color: var(--color-area-texto);
+    padding: 10px;
+    width: 100%;
+    height: 18rem;
+    text-align: justify;
+    font-size: 2rem;
+    color:var(--color-text-area);
+    resize: none;
+    border: none; /* Quita el borde */
+    outline: none; 
+}
+
+.text-area[readonly] {
+    width: 100%;
+    height: 77%;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    background-color: var(--color-area-texto-readonly);
+    color:var(--color-text-area-readonly);
+}
+
+.left-div2 {
+    background-color: var(--color-left-div2);  
+}
+
+.left-div3 {
+    background-color: var(--color-left-div3);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.p-bg{   
+    color: #495057; /* Color del texto */
+    font-size: 0.75rem; /* Ajusta el tamaño del texto */
+    padding-bottom: 1rem;
+}
+
+.circular-bg {
+    display: inline-block; /* Necesario para que width y height funcionen */
+    width: .75rem; /* Ajusta según el tamaño que necesites */
+    height: .75rem; /* Ajusta según el tamaño que necesites */
+    background-color: #495057; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Hace que el fondo sea circular */
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: .75rem; /* Centra el texto verticalmente */
+    font-size: .75rem; /* Ajusta el tamaño del texto */
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+
+    header, footer {
+        padding: 0.75rem;
+    }
+
+    .left-div{
+        padding:1rem;
+    }
+
+    .left-section  {
+        width: 100%;
+    }
+
+    .text-area {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .right-section {
+        width: 100%;
+        padding:0;
+        padding-left: 2rem;
+        padding-right : 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    .right-container{
+        padding-top:0;
+        padding-top: 2rem;
+        padding-bottom:  2rem;
+    }
+    
+    .instruction-text{
+        margin-top: 1rem;
+    } 
+    .container {
+        flex-direction: column;
+    }
+
+    .image-muneco{
+        display:none;
+    }
+
+    
+}
+
+/* Media Queries para celulares */
+@media (max-width: 600px) {
+
+    header, footer {
+        padding: 0.75em;
+    }
+
+    main {
+        padding: 1.5em;
+    }
+   
+    header {
+        padding-left: 0;
+        margin-left:0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section  {
+        width: 100%;
+    }
+
+    .left-div{
+        padding:0;
+    }
+   
+    .text-area {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .left-div3 {     
+        flex-direction: column;
+        gap: 20px;
+        align-content: center;
+    }
+    .submit-button{
+        width: 100%;
+    }
+    .right-section {
+        width: 100%;
+        padding:0;
+        padding-left: 2rem;
+        padding-right : 2rem;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+    }
+    .right-container{
+        padding-top:0;
+        padding-top: 2rem;
+        padding-bottom:  2rem;
+    }
+
+    .instruction-text{
+        margin-top: 1rem;
+    }
+
+    .p-bg{
+        width: auto;
+    }
+
+    .image-muneco{
+        display:none;
+    }
+
+ 
+}

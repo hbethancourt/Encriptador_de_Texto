@@ -1,45 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="icon" href="images/datos-encriptados.png" type="image/x-icon">
     <title>Encriptador de Texto</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-encriptar-16.png">
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-img-container">
-            <img src="images/Logo.png" alt="Imagen">
+    <div class="container">
+        <div class="left-section">
+            <header>
+                <img src="images/Logo.png" alt="Logo" class="Imagen-header">
+            </header>
+            
+            <div class="left-div left-div1">
+                <label for="input-textarea" class="label-textarea" id="label-textarea">Ingrese el texto aquí:</label>
+                <textarea id="input-textarea" class="text-area" oninput="validarTexto(event)"></textarea>
+            </div>
+
+            <div class="left-div left-div2">
+                <p class="p-bg"> <span class="circular-bg">!</span> Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="left-div left-div3">
+                <button class="submit-button" id="btnEncriptar" onclick="Encriptar()">Encriptar</button>
+                <button class="submit-button" id="btnDesencriptar" onclick="Desencriptar()">Desencriptar</button>
+            </div>
         </div>
-    </header>
-
-    <main>
-        <section class="section1">
-            <!-- Contenido de la sección 1 -->
-            <div>
-                <label for="textarea">Ingrese el texto aquí:</label>
+        
+        <div class="right-section">
+            <div class="right-container" id="sec2div1">
+                <img src="images/Muneco.png" alt="Esperando..." class="image-muneco">
+                <div class="message-not-found">Ningún mensaje fue encontrado.</div>
+                <div class="instruction-text">Ingresa el texto que desees encriptar o desencriptar.</div>
             </div>
-            <div>
-                <textarea id="textarea" name="textarea" class="textarea" rows="20" cols="50"></textarea>
+            <div class="right-container  data-encriptada"  style="display: none;" id="sec2div2">
+                <textarea id="text-area-readonly" class="text-area" readonly rows="8"></textarea>
+                <button class="submit-button button-copiar" id="btnCopiar" onclick="Copiar()">Copiar</button>
             </div>
-  
-            <div class="button-container">
-                <div class="info-mensaje-container">      
-                    <p class="info-message">Este es un mensaje informativo.</p>
-                </div>
-                <button class="detalle-button" onclick="encriptar()">Encriptar</button>
-                <button class="detalle-button" onclick="desencriptar()">Desencriptar</button>
-            </div>             
-        </section>
-        <section class="section2">
-            <!-- Contenido de la sección 2 -->
-             hola
-        </section>
-    </main>
+        </div>
+    </div>    
+    <footer>
+        <p>&copy; 2024 Hernando Bethancourt. Todos los derechos reservados.</p>
+    </footer>
 
-    <footer class="footer">
-        <p>&copy; 2024 Hernando Bethancourt. All rights reserved.</p>
-    </footer>  
+    <script src="scripts/scripts.js"></script>
+
 </body>
 </html>
